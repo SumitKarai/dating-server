@@ -1,5 +1,5 @@
 # Dating App - Backend Server
-
+Deployed backend server url- https://dating-server-kappa.vercel.app
 This is the backend server for the Dating App, built using Node.js and Express. It handles API requests, database interactions, and user authentication.
 
 ##  Technologies Used
