@@ -1,0 +1,111 @@
+{
+    "info": {
+        "name": "Dating App API",
+        "description": "API collection for Dating App - MERN Stack",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Register User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\",\n  \"gender\": \"Male\",\n  \"age\": 28,\n  \"latitude\": 28.6139,\n  \"longitude\": 77.2090\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:5000/api/register",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000",
+                            "path": [
+                                "api",
+                                "register"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Login User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:5000/api/login",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000",
+                            "path": [
+                                "api",
+                                "login"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "Get Nearby Users",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:5000/api/nearby-users?latitude=28.6139&longitude=77.2090&userId=YOUR_USER_ID",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000",
+                            "path": [
+                                "api",
+                                "nearby-users"
+                            ],
+                            "query": [
+                                {
+                                    "key": "latitude",
+                                    "value": "28.6139",
+                                    "description": "User's current latitude"
+                                },
+                                {
+                                    "key": "longitude",
+                                    "value": "77.2090",
+                                    "description": "User's current longitude"
+                                },
+                                {
+                                    "key": "userId",
+                                    "value": "YOUR_USER_ID",
+                                    "description": "Logged in user's ID to exclude from results"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
